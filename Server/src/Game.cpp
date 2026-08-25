@@ -9,7 +9,6 @@ void Game::Init()
 
 void Game::Update()
 {
-	//if (raylibOverlay::IsKeyPressed(82))
 	for(int i = 0; i < 4; i++)
 	{
 		server.Receive(ReceiveBuffer);
@@ -27,7 +26,6 @@ void Game::Update()
 
 	server.CheckTimeout(ReceiveBuffer);
 
-	//if (raylibOverlay::IsKeyPressed(83))
 	{
 		if (server.Transmit(SendBuffer))
 		{

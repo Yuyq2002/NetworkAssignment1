@@ -8,17 +8,18 @@ void Game::Init()
 
 void Game::Update()
 {
+	//C Key
 	if (raylibOverlay::IsKeyPressed(67))
 	{
 		client.InitConnection();
 	}
 
+	// X Key
 	if (raylibOverlay::IsKeyPressed(88))
 	{
 		client.InitDisconnection();
 	}
 
-	//if (raylibOverlay::IsKeyPressed(82))
 	for(int i = 0; i < 2; i++)
 	{
 		client.Receive(ReceiveBuffer);
@@ -32,7 +33,6 @@ void Game::Update()
 
 	RemoveDeadEntity();
 
-	//if (!raylibOverlay::IsKeyDown(83))
 	{
 		if (client.Transmit(SendBuffer))
 		{
